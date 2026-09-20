@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import RevealObserver from "@/components/RevealObserver";
 import ScrollMotion from "@/components/ScrollMotion";
 import "./globals.css";
 
@@ -41,15 +40,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    // suppressHydrationWarning: el script de abajo añade la clase `js` antes de hidratar
-    <html lang="es" suppressHydrationWarning className={`${inter.variable} ${jakarta.variable} antialiased`}>
-      <head>
-        {/* Marca que hay JS antes del primer pintado, para ocultar lo que aparecerá con animación */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-      </head>
+    <html lang="es" className={`${inter.variable} ${jakarta.variable} antialiased`}>
       <body>
         {children}
-        <RevealObserver />
         <ScrollMotion />
       </body>
     </html>
