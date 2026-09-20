@@ -87,18 +87,6 @@ export default function SolucionesPage() {
                   </div>
                   <h2 className="mt-5 text-[28px] leading-[1.12] font-extrabold sm:text-[34px]">{s.title}</h2>
                   <p className="mt-4 text-lg leading-relaxed text-ink-muted">{s.resumen}</p>
-
-                  <p className="mt-7 text-sm font-semibold text-navy-900">Con qué lo hacemos</p>
-                  <ul className="mt-3 flex flex-wrap gap-2">
-                    {s.herramientas.map((h) => (
-                      <li
-                        key={h}
-                        className="rounded-full border border-border bg-surface px-3 py-1.5 text-[13px] font-medium text-ink-muted"
-                      >
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
 
                 <div data-reveal className="grid gap-4 sm:grid-cols-2 lg:gap-5">
