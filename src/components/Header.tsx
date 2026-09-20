@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { nav } from "@/content/site";
 import Logo from "./Logo";
@@ -33,9 +34,9 @@ export default function Header() {
       }`}
     >
       <Container className="flex h-[72px] items-center justify-between lg:h-24">
-        <a href="#inicio" aria-label="Fluxaon, ir al inicio" className="logo-reveal shrink-0">
+        <Link href="/#inicio" aria-label="Fluxaon, ir al inicio" className="logo-reveal shrink-0">
           <Logo onDark priority className="h-9 w-auto lg:h-11" />
-        </a>
+        </Link>
 
         <nav aria-label="Principal" className="hidden items-center gap-8 md:flex">
           {nav.map((item) => (
@@ -47,7 +48,7 @@ export default function Header() {
               {item.label}
             </a>
           ))}
-          <ButtonLink href="#contacto" variant="white">
+          <ButtonLink href="/#contacto" variant="white">
             Agenda un diagnóstico
           </ButtonLink>
         </nav>
@@ -77,13 +78,13 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href="#contacto"
+            <Link
+              href="/#contacto"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex min-h-11 items-center justify-center rounded-control bg-white px-5 text-[15px] font-semibold text-navy-900"
             >
               Agenda un diagnóstico
-            </a>
+            </Link>
           </Container>
         </nav>
       )}
