@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
         source: "/essentialwater/:path*",
         destination: "https://essential-water-app.vercel.app/:path*",
       },
+      // Organigrama de HIVIMAR Industrial: mismo patron, proyecto aparte.
+      // Se sirve bajo fluxaon.com/orghivimarindustria.
+      {
+        source: "/orghivimarindustria",
+        destination: "https://organigrama-hivimar.vercel.app/",
+      },
+      {
+        source: "/orghivimarindustria/:path*",
+        destination: "https://organigrama-hivimar.vercel.app/:path*",
+      },
     ];
   },
 };
