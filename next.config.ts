@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
         source: "/hivimar/organigrama/:path*",
         destination: "https://organigrama-hivimar.vercel.app/:path*",
       },
+      // SinkroFlow (portal Marketing <-> Industria de HIVIMAR). Es una app Next.js con
+      // basePath /hivimar/marketing-industria, por eso el destino conserva la ruta:
+      // asi tambien resuelven sus archivos /_next bajo el mismo prefijo.
+      {
+        source: "/hivimar/marketing-industria",
+        destination: "https://sinkroflow.vercel.app/hivimar/marketing-industria",
+      },
+      {
+        source: "/hivimar/marketing-industria/:path*",
+        destination: "https://sinkroflow.vercel.app/hivimar/marketing-industria/:path*",
+      },
     ];
   },
   async redirects() {
