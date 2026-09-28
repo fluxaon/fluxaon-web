@@ -35,6 +35,16 @@ const nextConfig: NextConfig = {
         source: "/hivimar/marketing-industria/:path*",
         destination: "https://sinkroflow.vercel.app/hivimar/marketing-industria/:path*",
       },
+      // Demo de tablero gerencial financiero (empresa ficticia de gases industriales).
+      // Pagina estatica autocontenida, proyecto aparte en Vercel.
+      {
+        source: "/demotablerogerencial",
+        destination: "https://demo-tablero-gerencial.vercel.app/",
+      },
+      {
+        source: "/demotablerogerencial/:path*",
+        destination: "https://demo-tablero-gerencial.vercel.app/:path*",
+      },
     ];
   },
   async redirects() {
