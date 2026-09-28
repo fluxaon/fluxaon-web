@@ -35,6 +35,16 @@ const nextConfig: NextConfig = {
         source: "/hivimar/marketing-industria/:path*",
         destination: "https://sinkroflow.vercel.app/hivimar/marketing-industria/:path*",
       },
+      // SkillTrack (evaluacion de desempeno de HIVIMAR). App Next.js con basePath
+      // /hivimar/skilltrack: igual que SinkroFlow, el destino conserva la ruta.
+      {
+        source: "/hivimar/skilltrack",
+        destination: "https://skilltrack-lime.vercel.app/hivimar/skilltrack",
+      },
+      {
+        source: "/hivimar/skilltrack/:path*",
+        destination: "https://skilltrack-lime.vercel.app/hivimar/skilltrack/:path*",
+      },
       // Demo de tablero gerencial financiero (empresa ficticia de gases industriales).
       // Pagina estatica autocontenida, proyecto aparte en Vercel.
       {
