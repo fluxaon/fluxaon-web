@@ -55,6 +55,16 @@ const nextConfig: NextConfig = {
         source: "/demotablerogerencial/:path*",
         destination: "https://demo-tablero-gerencial.vercel.app/:path*",
       },
+      // WorkScope (levantamiento y analisis de actividades por cargo, multicliente).
+      // App Next.js con basePath /workscope: el destino conserva la ruta.
+      {
+        source: "/workscope",
+        destination: "https://workscope-beta.vercel.app/workscope",
+      },
+      {
+        source: "/workscope/:path*",
+        destination: "https://workscope-beta.vercel.app/workscope/:path*",
+      },
     ];
   },
   async redirects() {
