@@ -65,6 +65,18 @@ const nextConfig: NextConfig = {
         source: "/workscope/:path*",
         destination: "https://workscope-beta.vercel.app/workscope/:path*",
       },
+      // Tablero comercial de Grupo BEL (London Consulting Group). App
+      // Next.js con basePath /londoncg/bel/comercial: igual que WorkScope
+      // y SkillTrack, el destino conserva la ruta para que sus archivos
+      // /_next resuelvan bajo el mismo prefijo.
+      {
+        source: "/londoncg/bel/comercial",
+        destination: "https://bel-comercial.vercel.app/londoncg/bel/comercial",
+      },
+      {
+        source: "/londoncg/bel/comercial/:path*",
+        destination: "https://bel-comercial.vercel.app/londoncg/bel/comercial/:path*",
+      },
     ];
   },
   async redirects() {
