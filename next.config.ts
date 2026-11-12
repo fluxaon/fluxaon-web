@@ -77,6 +77,17 @@ const nextConfig: NextConfig = {
         source: "/londoncg/bel/comercial/:path*",
         destination: "https://bel-comercial.vercel.app/londoncg/bel/comercial/:path*",
       },
+      // Finanzas personales (gastos e ingresos). App Next.js con basePath
+      // /finanzas: el destino conserva la ruta. Esta regla se habia publicado
+      // desde una copia local sin guardarse en el repositorio; queda aqui.
+      {
+        source: "/finanzas",
+        destination: "https://finanzas-lyart-theta.vercel.app/finanzas",
+      },
+      {
+        source: "/finanzas/:path*",
+        destination: "https://finanzas-lyart-theta.vercel.app/finanzas/:path*",
+      },
       // Nomina en divisas de Grupo BEL (GTH). App Next.js con basePath
       // /londoncg/bel/nomina-gth, proyecto y base de datos aparte del tablero
       // comercial: el destino conserva la ruta igual que los anteriores.
