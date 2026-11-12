@@ -77,6 +77,17 @@ const nextConfig: NextConfig = {
         source: "/londoncg/bel/comercial/:path*",
         destination: "https://bel-comercial.vercel.app/londoncg/bel/comercial/:path*",
       },
+      // Nomina en divisas de Grupo BEL (GTH). App Next.js con basePath
+      // /londoncg/bel/nomina-gth, proyecto y base de datos aparte del tablero
+      // comercial: el destino conserva la ruta igual que los anteriores.
+      {
+        source: "/londoncg/bel/nomina-gth",
+        destination: "https://grupobel-nomina-gth.vercel.app/londoncg/bel/nomina-gth",
+      },
+      {
+        source: "/londoncg/bel/nomina-gth/:path*",
+        destination: "https://grupobel-nomina-gth.vercel.app/londoncg/bel/nomina-gth/:path*",
+      },
     ];
   },
   async redirects() {
